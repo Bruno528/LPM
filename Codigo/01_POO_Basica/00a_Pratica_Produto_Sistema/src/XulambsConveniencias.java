@@ -77,18 +77,48 @@ public class XulambsConveniencias {
      * @return O valor obtido com a venda de N unidades deste produto (N sendo definido pela pessoa operadora na execução)
      */
     public static double adicionarNaVenda(Produto prod){
-        //TODO: código do método
-        return 0d;
+        int quant;
+        System.out.println("Produto escolhido: " +prod.descricaoProduto());
+        System.out.println("Quantas unidades deseja? ");
+        quant = Integer.parseInt(teclado.nextLine());
+        return prod.valorLote(quant);
     }
     
     public static void main(String[] args) {
         Produto[] produtos = cadastrarProdutos();
-       // int opcao = ();
-        //do{//
-           // switch (opcao) {
-               // case 1 ->//
-                //case 1 ->//
-          //  }//
-       // }//
+        int opcao = exibirMenu();
+        do{
+            switch (opcao) {
+                case 1 -> iniciarVenda();
+                //case 1 -> exibirTotalVendido();//
+            }
+           opcao = exibirMenu();
+        }while(opcao !=0);
     }
+     
+    private static Object iniciarVenda() {
+        double  valorVenda = 0;
+        do{
+            Produto prod - escolherProduto();
+            valorVenda +=
+        }
+
+    }
+
+    private static int exibirMenu();{
+        int opcao =0;
+        System.out.println("XULAMBS CONVENICÊNCIA");
+        System.out.println("Escolha usa opção:");
+        System.out.println("1- Iniciar venda");
+        System.out.println("2- Mostrar total vendidos no dia");
+        System.out.println("0- Sair");
+        System.out.println("Digite sua escolha:  ");
+        opcao = Integer.parseInt(teclado.nextLine());
+
+        
+        
+
+    }
+
+    
 }
