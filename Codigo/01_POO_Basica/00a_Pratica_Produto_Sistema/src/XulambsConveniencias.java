@@ -51,11 +51,11 @@ public class XulambsConveniencias {
         double valorUnitario;
         String continuar = "s";
         do{
-            System.out.println("CADASTRO DE PRODUTO");
+            System.out.println("--------CADASTRO DE PRODUTO--------");
             System.out.print("Descrição do produto: ");
             descricao = teclado.nextLine();
             System.out.print("Valor unitário do produto: ");
-            valorUnitario = Double.parseDouble(teclado.nextLine());
+            valorUnitario = Double.parseDouble(teclado.nextLine().replace(",", "."));
             novo = new Produto();
             novo.registrar(descricao, valorUnitario);
             novosProdutos[quantosProdutos] = novo;
@@ -63,6 +63,7 @@ public class XulambsConveniencias {
             System.out.println();
             System.out.print("Continuar cadastro (s/n)?");
             continuar = teclado.nextLine();
+            System.out.println("--------Cadastro Finalizado--------");
         }while(continuar.toLowerCase().equals("s"));
         novosProdutos = Arrays.copyOf(novosProdutos, quantosProdutos);
         return novosProdutos;
@@ -81,6 +82,13 @@ public class XulambsConveniencias {
     }
     
     public static void main(String[] args) {
-        
+        Produto[] produtos = cadastrarProdutos();
+       // int opcao = ();
+        //do{//
+           // switch (opcao) {
+               // case 1 ->//
+                //case 1 ->//
+          //  }//
+       // }//
     }
 }
